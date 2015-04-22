@@ -1,0 +1,9 @@
+# OSX specifics #
+#################
+*.DS_Store
+
+# Compiled source #
+###################
+
+/target
+/node_modules

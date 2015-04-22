@@ -1,0 +1,62 @@
+//  http://www.colourlovers.com/palette/92095/Giant_Goldfish
+//  sea 105,210,231
+//  sea and sand 167,219,216
+//  beach 224,228,204
+//  goldfish  243,134,48
+//  pills 250,105,0
+.trigon {
+  padding: 0;
+  margin: 0;
+  background-color: rgb(105,210,231);
+  .title {
+    transform: translateX(-50%);
+    position: fixed;
+    margin: 0px;
+    background-color: rgb(105,210,231);
+    padding: 0 30px;
+    color: white;
+    top: 50px;
+    left: 50%;
+    font-size: 60px;
+    line-height: 60px;
+    z-index: 4;
+  }
+  .canvas-wrap, .svg-wrap
+  #neuf-canvas, #neuf-svg, .separator {
+    position: fixed;
+  }
+  .canvas-wrap, .svg-wrap {
+    width: 50%;
+    height: 100%;
+    top: 0;
+  }
+  .canvas-wrap { left: 0 }
+  .svg-wrap { right: 0 }
+  #neuf-canvas {
+    background: rgb(243,134,48);
+    top: 0;
+    left: 0;
+    z-index: 1;
+  }
+  #neuf-svg {
+    background: rgb(250,105,0);
+    top: 0;
+    bottom: 0;
+    left: 50%;
+    z-index: 2;
+    width: 50%;
+    .th-line {
+      stroke:rgb(255,255,255);
+      stroke-width:1
+    }
+  }
+  .separator {
+    transform: translateX(-50%);
+    background-color: rgb(105,210,231);
+    width: 20px;
+    top: 0px;
+    left: 50%;
+    bottom: 0;
+    z-index: 3;
+  }
+}

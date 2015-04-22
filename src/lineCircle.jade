@@ -1,0 +1,13 @@
+include assets/mixins/_include
+
+doctype html
+html(lang="en")
+    head
+        title= neaf | linecircle
+        script(data-main="http://localhost:8282/scripts/lineCircle/boots" src="scripts/require.js")
+        link(href="styles/main.css" media="all" rel="stylesheet" type="text/css")
+        link(href="styles/pages/lineCircle.css" media="all" rel="stylesheet" type="text/css")
+    body.lineCircle
+        +neuf-navigation()
+
+        canvas#neuf-canvas()

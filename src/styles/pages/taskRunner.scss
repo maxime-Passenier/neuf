@@ -1,0 +1,120 @@
+// =======================================
+// Variables
+// =======================================
+// COLORS:  http://www.colourlovers.com/palette/3733003/Best_wishes
+$color-rdo-hex: #DC599B;
+$color-rdo-rgb: rgb(220,89,155);
+$color-soapBubble-hex: #FFE1F0;
+$color-soapBubble-rgb: rgb(255,225,240);
+$color-tLight-hex: #E1F3FF;
+$color-tLight-rgb: rgb(225,243,255);
+$color-explorer-hex: #039BFF;
+$color-explorer-rgb: rgb(3,155,255);
+$color-yesByPeach-hex: #FFF503;
+$color-yesByPeach-rgb: rgb(255,245,3);
+// font
+$fontsize-large: 35px;
+
+// =======================================
+// external
+// =======================================
+@import url(http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,400,300,600|Oswald);
+// font-family: 'Oswald', sans-serif;
+// font-family: 'Open Sans', sans-serif;
+
+
+// =======================================
+// reset main styles
+// =======================================
+.taskRunner {
+  background: linear-gradient(45deg, white 50%, $color-soapBubble-hex 50%);
+  background-size: 10px 10px;
+  padding: 0;
+  margin: 0;
+  font-family: 'Open Sans', sans-serif;
+}
+h1, h2, h3, h4, h5 {
+  font-family: 'Oswald', sans-serif;
+  padding: 0;
+  margin: 0;
+  color: $color-explorer-hex;
+}
+svg {
+  height: 100%;
+  width: 100%;
+}
+
+// =======================================
+// element: header
+// =======================================
+.header {
+  opacity: 1;
+}
+.header__title {
+  text-transform: uppercase;
+  text-align: center;
+  color: $color-rdo-hex;
+  font-size: $fontsize-large;
+  line-height: $fontsize-large;
+  padding: 10px;
+  text-shadow: 2px 2px mix(black, $color-rdo-hex, 50%);
+}
+
+// =======================================
+// element: header
+// =======================================
+.navigation {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  margin-bottom: 10px;
+}
+.navigation__item {
+  transition: all 100ms ease;
+  cursor: pointer;
+  border: 3px solid mix(white, $color-rdo-hex, 50%);
+  border-radius: 100%;
+  box-shadow: 2px 2px rgba(0,0,0,0.3);
+  box-sizing: border-box;
+  background-color: $color-rdo-hex;
+  height: 70px;
+  text-align: center;
+  padding: 5px;
+  margin: 3px;
+  width: 70px;
+  &:hover {
+    transform: translateX(-5px) translateY(-5px);
+    box-shadow: 7px 7px rgba(0,0,0,0.5);
+  }
+}
+// =======================================
+// element: navigation
+// =======================================
+.navigation__item__icon {
+  display: block;
+  padding-top: 7px;
+  fill: white;
+  margin: auto;
+  height: 20px;
+  width: 20px;
+}
+.navigation__item__text {
+  color: white;
+  display: inline-block;
+  font-family: 'Open Sans', sans-serif;
+  font-size: 15px;
+}
+
+// =======================================
+// element: frame
+// =======================================
+.frame {
+  background: white;
+  border: 3px solid $color-rdo-hex;
+  border-radius: 10px;
+  margin: auto;
+  min-height: 250px;
+  max-width: 500px;
+  min-width: 500px;
+  padding: 10px;
+}

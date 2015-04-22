@@ -1,0 +1,22 @@
+include ../assets/mixins/_include
+doctype html
+html(lang="en")
+    head
+        title= test
+        script(data-main="http://localhost:8282/scripts/taskRunner/bs" src="/scripts/require.js")
+        link(href="../styles/pages/taskRunner.css" media="all" rel="stylesheet" type="text/css")
+    body.taskRunner
+        .header
+            h1.header__title taskRunner
+        .navigation
+            .navigation__item
+                .navigation__item__icon
+                    include ../assets/icons/set_entypo/gauge.svg
+                .navigation__item__text Run
+            .navigation__item
+                .navigation__item__icon
+                    include ../assets/icons/set_entypo/tools.svg
+                .navigation__item__text Build
+
+        .frame
+            | frame

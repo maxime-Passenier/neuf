@@ -1,0 +1,10 @@
+include ../assets/mixins/_include
+doctype html
+html(lang="en")
+    head
+        title= test
+        script(data-main="http://localhost:8282/scripts/taskRunner/bs" src="/scripts/require.js")
+        link(href="../styles/main.css" media="all" rel="stylesheet" type="text/css")
+    body.taskRunner
+        +neuf-navigation()
+        h1.title taskRunner 2

@@ -1,0 +1,21 @@
+$neaf-bg-color: rgb(73,10,61);
+$neaf-fore-color: rgb(255,255,255);
+$neaf-size: 200px;
+
+.neuf {
+  background-color: $neaf-bg-color;
+  box-shadow: inset 0 0 0 5px $neaf-bg-color, inset 0 0 0 6px $neaf-fore-color;
+  border-radius: 100%;
+  position: relative;
+  height: $neaf-size;
+  width: $neaf-size;
+  text-align: center;
+  &:before {
+    font-family: 'Lato', sans-serif;
+    font-size: $neaf-size / 2;
+    line-height: $neaf-size;
+    font-weight: 100;
+    content: '9';
+    color: $neaf-fore-color;
+  }
+}

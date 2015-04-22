@@ -1,0 +1,16 @@
+include assets/mixins/_include
+
+doctype html
+html(lang="en")
+    head
+        title= test
+        script(data-main="http://localhost:8080/scripts/welcome" src="scripts/require.js")
+        link(href="styles/main.css" media="all" rel="stylesheet" type="text/css")
+        link(href="styles/pages/welcome.css" media="all" rel="stylesheet" type="text/css")
+    body.welcome
+        +neuf-navigation()
+        .neuf-hello-wrap
+            canvas#neuf-hello()
+
+
+
