@@ -1,0 +1,93 @@
+@import url(http://fonts.googleapis.com/css?family=Roboto:300,700,400);
+
+.transfer20 {
+  background: whitesmoke;
+  font-family: 'Roboto', sans-serif;
+  width: 100%;
+}
+
+.block {}
+.block__element {}
+.block--modifier {}
+
+.tranfser {
+  background: white;
+  border: 1px solid #c9c9c9;
+  border-radius: 5px;
+  box-sizing: border-box;
+  font-size: 17px;
+  font-weight: 300;
+  margin: 20px auto;
+  min-height: 200px;
+  padding: 15px;
+  cursor: text;
+  width: 500px;
+}
+
+%text {
+  display: inline-block;
+  position: relative;
+  &:after {
+    content: '\00a0';
+  }
+}
+
+.tranfser__supporting-text {
+  @extend %text;
+  color: #c3c3c3;
+}
+
+.tranfser__text {
+  @extend %text;
+  color: #7f7f7f;
+}
+
+.tranfser__tooltip {
+  background: #c9c9c9;
+  border-radius: 3px;
+  cursor: pointer;
+  left: 0;
+  margin-top: 5px;
+  min-width: 150px;
+  padding: 1px;
+  position: absolute;
+  top: 100%;
+  font-size: 13px;
+  &:before {
+    border: solid transparent;
+    border-color: transparent;
+    border-bottom-color: #c9c9c9;
+    border-width: 4px;
+    bottom: 100%;
+    content: " ";
+    position: absolute;
+    left: 15px;
+    height: 0;
+    width: 0;
+    margin-left: -5px;
+  }
+}
+
+.tranfser__tooltip__wrap {
+  max-height: 150px;
+  overflow-y: auto;
+}
+
+.tranfser__tooltip__item {
+  background: white;
+  border-radius: 2px;
+  margin-bottom: 1px;
+  padding: 5px;
+  transition: all 0.2s ease;
+  white-space: nowrap;
+  &:hover {
+    background-color: lightskyblue;
+  }
+  &:first-child{
+    padding-top: 8px;
+  }
+  &:last-child{
+    padding-bottom: 8px;
+    margin-bottom: 0;
+  }
+}
