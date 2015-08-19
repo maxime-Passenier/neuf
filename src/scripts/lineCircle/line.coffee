@@ -34,8 +34,7 @@ define ->
 
     # set the lines angle
     setAngle = (angleArg)->
-      a = angleArg
-      r = a / 180 * Math.PI
+      r = angleArg / 180 * Math.PI
 
     # set the length
     setLength = (lArg)->
@@ -54,7 +53,6 @@ define ->
     # drawing the stuff
     # --------------------------------------
     getLength = ->
-      console.log 'getLength'
 #      tl = max_l if !tl?
 #      if tl > l and l+s>tl
 

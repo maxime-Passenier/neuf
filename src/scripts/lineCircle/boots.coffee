@@ -9,6 +9,8 @@ require [
   CONSTANTS =
     domIdCanvas: "neuf-canvas"
     degBetweenLines: 2
+    totalDeg : 360
+    lineIncrement : 5
     minLength: 50
     maxLength: 250
   # globals
@@ -33,17 +35,26 @@ require [
     lines = []
     i = 0
     length = 10
-    while i < 360
+    add = true
+    while i < CONSTANTS.totalDeg
       l = new line.getLine ctx, 100
       l.setRefPoint canvas.width/2, canvas.height/2
       l.setAngle i
       l.setLength length
-      l.setMinLength CONSTANTS.minLength
-      l.setMaxLength CONSTANTS.maxLength
+      l.setMinLength 10
+      l.setMaxLength canvas.width/2
       l.draw()
       lines.push l
-      length = length + 1
+      length = if add then length + CONSTANTS.lineIncrement else length - CONSTANTS.lineIncrement
       i = i + CONSTANTS.degBetweenLines
+      if add and i > CONSTANTS.totalDeg/2
+        console.log 'change direction'
+        add = false
+
+  # draw the lines
+  draw = ->
+
+
 
 
   # ========================================
@@ -54,6 +65,7 @@ require [
     ctx = canvas.getContext '2d'
     setCanvasSize()
     initLines()
+    draw()
 
 
   init()
