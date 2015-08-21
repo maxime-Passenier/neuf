@@ -1,0 +1,21 @@
+include assets/mixins/_include
+doctype html
+html(lang="en")
+    head
+        title= test
+        script(data-main="http://localhost:8282/scripts/pageSlide" src="scripts/require.js")
+        link(href="styles/main.css" media="all" rel="stylesheet" type="text/css")
+        link(href="styles/pages/pageSlide.css" media="all" rel="stylesheet" type="text/css")
+    body.pageSlide
+
+
+
+        .pageSlider#thaPageSlider
+            .pageSlider__page__wrap#thaPageSliderWrap
+                .pageSlider__page__row
+                    .pageSlider__page.pageSlider__page--one
+                        .pageSlider__page__title Page 1
+                    .pageSlider__page.pageSlider__page--two
+                        .pageSlider__page__title Page 2
+                    .pageSlider__page.pageSlider__page--three
+                        .pageSlider__page__title Page 3
