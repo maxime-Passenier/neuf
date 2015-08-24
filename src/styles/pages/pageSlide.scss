@@ -14,6 +14,8 @@ $width : 700px;
 $height : 500px;
 
 .pageSlider {
+  background-color: rgba(0,0,0, 0.2) ;
+  box-shadow: inset 3px 3px 3px black;
   display: block;
   overflow: hidden;
   width: $width;
